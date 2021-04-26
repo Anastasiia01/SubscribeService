@@ -1,0 +1,11 @@
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\bin\Debug\PubSubHost.exe.config
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\bin\Debug\PubSubHost.exe
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\bin\Debug\PubSubHost.pdb
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\bin\Debug\PubSubLib.dll
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\obj\Debug\PubSubHost.csproj.CoreCompileInputs.cache
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\obj\Debug\PubSubHost.csproj.CopyComplete
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\obj\Debug\PubSubHost.exe
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\obj\Debug\PubSubHost.pdb
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\bin\Debug\PubSubLib.dll.config
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\bin\Debug\PubSubLib.pdb
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubHost\obj\Debug\PubSubHost.csprojAssemblyReference.cache

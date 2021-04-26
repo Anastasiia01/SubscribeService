@@ -1,0 +1,9 @@
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\bin\Debug\PubSubClient.exe.config
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\bin\Debug\PubSubClient.exe
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\bin\Debug\PubSubClient.pdb
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\obj\Debug\PubSubClient.Form1.resources
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\obj\Debug\PubSubClient.Properties.Resources.resources
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\obj\Debug\PubSubClient.csproj.GenerateResource.cache
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\obj\Debug\PubSubClient.csproj.CoreCompileInputs.cache
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\obj\Debug\PubSubClient.exe
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\obj\Debug\PubSubClient.pdb
