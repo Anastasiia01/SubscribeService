@@ -40,6 +40,8 @@ namespace PubSubClient
             this.btnUnsubscribe = new System.Windows.Forms.Button();
             this.btnChangePrice = new System.Windows.Forms.Button();
             this.txtNewPrice = new System.Windows.Forms.TextBox();
+            this.txtSymbol = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTestCallback
@@ -122,7 +124,7 @@ namespace PubSubClient
             // 
             // btnChangePrice
             // 
-            this.btnChangePrice.Location = new System.Drawing.Point(390, 148);
+            this.btnChangePrice.Location = new System.Drawing.Point(418, 207);
             this.btnChangePrice.Name = "btnChangePrice";
             this.btnChangePrice.Size = new System.Drawing.Size(134, 47);
             this.btnChangePrice.TabIndex = 9;
@@ -132,16 +134,34 @@ namespace PubSubClient
             // 
             // txtNewPrice
             // 
-            this.txtNewPrice.Location = new System.Drawing.Point(550, 158);
+            this.txtNewPrice.Location = new System.Drawing.Point(574, 217);
             this.txtNewPrice.Name = "txtNewPrice";
             this.txtNewPrice.Size = new System.Drawing.Size(100, 26);
             this.txtNewPrice.TabIndex = 10;
+            // 
+            // txtSymbol
+            // 
+            this.txtSymbol.Location = new System.Drawing.Point(574, 147);
+            this.txtSymbol.Name = "txtSymbol";
+            this.txtSymbol.Size = new System.Drawing.Size(100, 26);
+            this.txtSymbol.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(418, 126);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 47);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Symbol";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 373);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtSymbol);
             this.Controls.Add(this.txtNewPrice);
             this.Controls.Add(this.btnChangePrice);
             this.Controls.Add(this.btnUnsubscribe);
@@ -174,6 +194,8 @@ namespace PubSubClient
         private System.Windows.Forms.Button btnUnsubscribe;
         private System.Windows.Forms.Button btnChangePrice;
         private System.Windows.Forms.TextBox txtNewPrice;
+        private System.Windows.Forms.TextBox txtSymbol;
+        private System.Windows.Forms.Button button1;
     }
 }
 

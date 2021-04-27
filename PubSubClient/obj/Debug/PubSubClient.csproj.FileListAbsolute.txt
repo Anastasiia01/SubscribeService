@@ -7,3 +7,4 @@ C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\
 C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\obj\Debug\PubSubClient.csproj.CoreCompileInputs.cache
 C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\obj\Debug\PubSubClient.exe
 C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\obj\Debug\PubSubClient.pdb
+C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubClient\obj\Debug\PubSubClient.csprojAssemblyReference.cache

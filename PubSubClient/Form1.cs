@@ -19,6 +19,7 @@ namespace PubSubClient
     public partial class Form1 : Form
     {
         STKClient stkC = new STKClient();
+        List<string> symbols = new List<string>();
         int myId = 0;
         public Form1()
         {
@@ -41,14 +42,15 @@ namespace PubSubClient
         private void btnChangePrice_Click(object sender, EventArgs e)
         {
             PS.PriceChangeClient pcc = new PS.PriceChangeClient();
-            pcc.ChangeStockPrice("IBM", double.Parse(txtNewPrice.Text));
+            pcc.ChangeStockPrice(txtSymbol.Text, double.Parse(txtNewPrice.Text));
         }
 
         private void btnSubscribe_Click(object sender, EventArgs e)
         {
             try
             {
-                stkC.SubscribeToPriceChange("IBM", 128, myId);
+                stkC.SubscribeToPriceChange(txtSymbol.Text, double.Parse(txtNewPrice.Text), myId);
+                symbols.Add(txtSymbol.Text);
             }
             catch (Exception ex)
             {
@@ -60,7 +62,8 @@ namespace PubSubClient
         {
             try
             {
-                stkC.UnSubscribeToPriceChange("IBM");
+                stkC.UnSubscribeToPriceChange(txtSymbol.Text);
+                symbols.Remove(txtSymbol.Text);
             }
             catch (Exception ex)
             {
@@ -72,7 +75,8 @@ namespace PubSubClient
         {
             try
             {
-                stkC.UnSubscribeToPriceChange("IBM");
+                foreach(string sym in symbols)
+                    stkC.UnSubscribeToPriceChange(sym);
             }
             catch (Exception ex)
             {

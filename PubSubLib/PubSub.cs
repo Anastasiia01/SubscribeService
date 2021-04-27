@@ -12,7 +12,7 @@ namespace PubSubLib
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple)]
     public class PubSub : ILongCompute, IStocks, IPriceChange
     {
-        static List<IStockCallback> SubscriberList = new List<IStockCallback>();
+        static List<SubscribeInfo> SubscriberList = new List<SubscribeInfo>();
         ComputeResult cr = new ComputeResult();
         Object olock = new object();
 
@@ -53,10 +53,21 @@ namespace PubSubLib
             try
             {
                 IStockCallback callbackChannel = OperationContext.Current.GetCallbackChannel<IStockCallback>();
-                if (SubscriberList.Contains(callbackChannel) == false)
+                bool ifNewSubscriber = true;
+                foreach (SubscribeInfo sub in SubscriberList)
                 {
-                    SubscriberList.Add(callbackChannel);
-
+                    if(sub.ChannelToClient == callbackChannel) //found subscriber
+                    {
+                        ifNewSubscriber = false;
+                        sub.AddSymbol(stocksym, triggerPrice);
+                    }
+                }
+                if (ifNewSubscriber)
+                {
+                    SubscribeInfo subscriber = new SubscribeInfo();                  
+                    SubscriberList.Add(subscriber);
+                    subscriber.ChannelToClient = callbackChannel;
+                    subscriber.AddSymbol(stocksym, triggerPrice);
                 }
             }
             catch (Exception ex)
@@ -71,10 +82,20 @@ namespace PubSubLib
             try
             {
                 IStockCallback callbackChannel = OperationContext.Current.GetCallbackChannel<IStockCallback>();
-                if (SubscriberList.Contains(callbackChannel) == true)
+                SubscribeInfo subToRemove = null;
+                foreach (SubscribeInfo sub in SubscriberList)
                 {
-                    SubscriberList.Remove(callbackChannel);
+                    if (sub.ChannelToClient == callbackChannel) //found subscriber
+                    {
+                        sub.RemoveSymbol(stocksym);
+                        if (sub.GetNumOfSymbolsSubscribed() == 0)
+                        {
+                            subToRemove = sub;                            
+                        }
+                    }
                 }
+                if (subToRemove != null)
+                    SubscriberList.Remove(subToRemove);
             }
             catch (Exception ex)
             {
@@ -89,19 +110,21 @@ namespace PubSubLib
         {
             try
             {
-                if ((symbol == "IBM") && (newprice > 120))
+                StockInfo si = new StockInfo();
+                si.Price = newprice;
+                si.Symbol = symbol;
+                si.STime = DateTime.Now;
+                // trigger call to the subscribers
+                foreach (SubscribeInfo sub in SubscriberList)
                 {
-                    // trigger call to the subscribers
-                    foreach (IStockCallback icbChannel in SubscriberList)
+                    double triggerPrice = sub.getStockTriggerPrice(symbol);
+                    if (triggerPrice != -1 && triggerPrice <= newprice)
                     {
-                        StockInfo si = new StockInfo();
-                        si.Price = newprice;
-                        si.Symbol = symbol;
-                        si.STime = DateTime.Now;
-                        if (((ICommunicationObject)icbChannel).State == CommunicationState.Opened)
-                            icbChannel.OnPriceChange(si);
+                        if (((ICommunicationObject)sub.ChannelToClient).State == CommunicationState.Opened)
+                            sub.ChannelToClient.OnPriceChange(si);
                     }
                 }
+                
             }
             catch (Exception ex)
             {

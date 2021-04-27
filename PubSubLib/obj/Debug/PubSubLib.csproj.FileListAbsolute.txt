@@ -1,7 +1,6 @@
 C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubLib\bin\Debug\PubSubLib.dll.config
 C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubLib\bin\Debug\PubSubLib.dll
 C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubLib\bin\Debug\PubSubLib.pdb
-C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubLib\obj\Debug\PubSubLib.csprojAssemblyReference.cache
 C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubLib\obj\Debug\PubSubLib.csproj.CoreCompileInputs.cache
 C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubLib\obj\Debug\PubSubLib.dll
 C:\Users\anast\Documents\_Spring_2021\Parallel_Computing\PubSubLib\PubSubLib\obj\Debug\PubSubLib.pdb
